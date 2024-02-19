@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .porfolio_list {
+        width: 860px;
+        margin: 0 auto;
+        padding: 10px;
+        background-color: gray;
+      }
+      .porfolio_list li {
+        float: left;
+        margin-right: 20px;
+        list-style: none;
+      }
+      .porfolio_list li:last-child {
+        margin-right: 0;
+      }
+      .porfolio_list:after {
+        content: "";
+        clear: both;
+        /* 인라인 요소에는 clear가 먹지 않는다 */
+        /* 그래서 display속성을 block으로 바꿔줘야 한다 */
+        /* 또는 부모인 ul에 float을 주면 claer를 안 줘도 자동 좌우배열된다 */
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Float layout</h1>
+    <ul class="porfolio_list">
+      <li>
+        <img src="https://via.placeholder.com/200" alt="" />
+      </li>
+      <li>
+        <img src="https://via.placeholder.com/200" alt="" />
+      </li>
+      <li>
+        <img src="https://via.placeholder.com/200" alt="" />
+      </li>
+      <li>
+        <img src="https://via.placeholder.com/200" alt="" />
+      </li>
+    </ul>
+  </body>
+</html>
