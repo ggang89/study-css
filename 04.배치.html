@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent {
+        display: flex;
+        flex-direction: column-reverse;
+        /* row : 옆으로 나란히 배치 */
+        /* column : 위에서 아래로 배치 */
+      }
+      .parent_2 {
+        display: flex;
+        flex-wrap: wrap;
+        /* wrap :위에서 아래로 쌓는것 */
+        /* 기본속성이 no-wrap으로 되어 있어서 양옆으로 배열된다 */
+      }
+      .parent div {
+        padding: 10px;
+        border: 1px solid black;
+      }
+
+      .parent_2 div {
+        border: 1px solid red;
+        padding: 200px;
+      }
+    </style>
+  </head>
+
+  <!-- 주축에서 배치하는게 flex -->
+  <!-- 교차축에서 배치 : align-item
+   justify-content와 같은 속성으로 사용함 -->
+  <body>
+    <div class="parent">
+      <div>flex-item 1</div>
+      <div>flex-item 2</div>
+      <div>flex-item 3</div>
+    </div>
+    <div class="parent_2">
+      <div>flex-item 1</div>
+      <div>flex-item 2</div>
+      <div>flex-item 3</div>
+    </div>
+  </body>
+</html>
