@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    if(a > b){
+      document.write('a가 b보다 크다');
+    }else{
+      document.write('a가 b보다 작다.');
+    }
+
+    //축약 1
+    if(a > b)
+      document.write('a가 b보다 크다');
+    else
+      document.write('a가 b보다 작다.');
+    
+
+    //축약 2 = > 삼항연산자
+    (a > b)?
+      document.write('a가 b보다 크다'):
+      document.write('a가 b보다 작다.');
+    
+
+      //비교연산자
+      if(1 != '1') {
+        document.write('두 값은 같지 않다');
+      }else {
+        document.write('두 값은 같다')// 같다고 출력됨
+      }
+
+      if(2 !== '2'){
+        document.write('두 값은 같지 않다');//같지 않다고 출력됨=>타입까지 검사하므로(숫자와 문자임)
+      }else {
+        document.write('두 값은 같다');
+      }
+  </script>
+</body>
+</html>
