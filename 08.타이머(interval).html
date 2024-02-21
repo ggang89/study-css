@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="stop">stop</button>
+    <button id="start">start</button>
+    <script>
+      // let interval = setInterval(function () {
+      //   alert("반갑습니다.");
+      // }, 4000);
+
+      //1. 위의 코드를 코드의 간결을 위해서 함수 안에 넣는다.
+      //2. let을 함수밖에 선언해줘야지 stop애니메이션이 정상작동한다.
+      let interval;
+      function autoHi() {
+        //let interval = setInterval(function () {
+        interval = setInterval(function () {
+          //함수 내에 let은 빼준다. let을 다시 써주면 초기화되는 것이므로
+
+          alert("반갑습니다.");
+        }, 4000);
+        //함수를 만들기만 하고 선언을 안해줌 => 함수정의만 해줌
+      }
+      autoHi(); //함수 선언을 해줌 => 실행이됨
+
+      document.querySelector("#stop").addEventListener("click", () => {
+        clearInterval(interval);
+        //clearInterval(변수 이름);
+        //2.function을 만들면서 변수 interval이 함수 안에 갇힘(지역변수가 됨)
+        //  작동시킬려면 변수를 함수 밖에 선언해주고, 함수에서는 let을 빼줘야함
+        // let을 다시쓰면 초기화되기 때문
+      });
+      document.querySelector("#start").addEventListener("click", () => {
+        // let interval = setInterval(function () {
+        //   alert("반갑습니다.");
+        // }, 4000);
+
+        autoHi();
+      });
+    </script>
+  </body>
+</html>
