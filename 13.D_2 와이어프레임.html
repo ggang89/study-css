@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D_2 유형 와이어프레임</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        color: #333;
+        box-sizing: border-box;
+      }
+      a {
+        color: inherit;
+      }
+      .hidden{
+        display: none;
+      }
+      /* 레이아웃 */
+      main{
+        display: flex;
+      }
+      main >*{
+        border: 1px solid red;
+      }
+      main aside{
+        width: 200px;
+      }
+      main aside header{
+        height: 100px;
+      }
+      aside nav{
+        height: 400px;
+      }
+      .main-content{
+        flex: 1;
+      }
+      /* slide */
+      .slide-wrapper{
+        display: flex;
+      }
+      .slide-wrapper > *{
+        border: 1px solid olive;
+        height: 400px;
+      }
+      .slide-image{
+        flex: 1;
+      }
+      .slide-shortcut{
+        width: 230px;
+      }
+      /* news gallery */
+      .news-gallery{
+        display: flex;
+      }
+      .news-gallery > *{
+        height: 250px;
+        border: 1px solid yellow;
+        flex: 1;
+      }
+
+      footer{
+        display: flex;
+      }
+      footer >*{
+        border: 1px solid black;
+        height: 100px;
+      }
+      .footer-logo{
+        width: 200px;
+      }
+      .copyright{
+        flex: 1;
+      }
+      .family-site{
+        width: 230px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <aside>
+        <header></header>
+        <nav></nav>
+      </aside>
+      <section class="main-content">
+        <h2 class="hidden">Main Content</h2>
+        <div class="slide-wrapper">
+          <div class="slide-image"></div>
+          <div class="slide-shortcut"></div>
+        </div>
+        <div class="news-gallery">
+          <article id="notice">
+            <h2>공지사항</h2>
+          </article>
+          <article id="galler">
+            <h2>갤러리</h2>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-logo"></div>
+      <div class="copyright"></div>
+      <div class="family-site"></div>
+    </footer>
+  </body>
+</html>
