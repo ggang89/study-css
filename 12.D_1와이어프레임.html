@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D_1 와이어프레임</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        color: #333;
+        box-sizing: border-box;
+      }
+      a {
+        color: inherit;
+        /* 부모에서 지정한 색깔을 a태그가 자동 상속되도록 함 */
+        /* 보통 a태그는 따로 지정해줘야함 */
+      }
+      main {
+        display: flex;
+      }
+      main > * {
+        border: 1px solid #ccc;
+      }
+      aside {
+        width: 200px;
+      }
+      .content {
+        /* width: calc(100% - 200px); */
+        flex: 1;
+      }
+      /* aside */
+      aside > * {
+        border: 1px solid #ccc;
+      }
+      aside header {
+        height: 100px;
+      }
+      aside nav {
+        height: 400px;
+      }
+      aside .spot-menu {
+        height: 50px;
+      }
+      /* slide */
+      .slide_wrapper {
+        height: 400px;
+        position: relative;
+      }
+      .slide_image {
+        border: 1px solid blue;
+        height: 400px;
+      }
+      .slide_banner {
+        position: absolute;
+        border: 1px solid green;
+        width: 150px;
+        height: 300px;
+        top: 0;
+        right: 0;
+      }
+      /* shortcut */
+      .shortcut {
+        border: 1px solid pink;
+        height: 200px;
+      }
+      .news_gallery {
+        border: 1px solid green;
+        height: 250px;
+      }
+      footer{
+        display: flex;
+      }
+      footer >*{
+        border: 1px solid #ccc;
+        height: 100px;
+      }
+      .footer_logo{
+        width: 200px;
+      }
+      .copyright{
+        flex: 1;
+      }
+      .sns{
+        width: 250px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <aside>
+        <header>
+          <div class="header-logo"></div>
+        </header>
+        <nav></nav>
+        <ul class="spot-menu"></ul>
+      </aside>
+      <div class="content">
+        <div class="slide-wrapper">
+          <div class="slide_image"></div>
+          <div class="slide_banner"></div>
+         
+        </div>
+        <div class="items">
+          <div class="shortcut"></div>
+          <div class="news_gallery"></div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer_logo"></div>
+      <div class="copyright"></div>
+      <div class="sns"></div>
+    </footer>
+  </body>
+</html>
