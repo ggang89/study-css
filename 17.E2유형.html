@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        font-size: 14px;
+        color: #333;
+      }
+      a {
+        color: inherit;
+      }
+      .hidden {
+        display: none;
+      }
+      body {
+        height: 100vh;
+      }
+      main {
+        display: flex;
+        height: calc(100% - 100px);
+      }
+      main > * {
+        border: 1px solid #aaa;
+      }
+      aside {
+        width: 200px;
+      }
+      main .center {
+        width: 400px;
+      }
+      main .slide-wrapper {
+        flex: 1;
+      }
+
+      /* aside */
+     
+      aside > * {
+        border: 1px solid #aaa;
+      }
+      aside header {
+        height: 100px;
+      }
+      aside nav {
+        height: 400px;
+      }
+      .center > * {
+        border: 1px solid #aaa;
+      }
+      .notice {
+        height: 250px;
+      }
+      .gallery {
+        height: 250px;
+      }
+      .banner {
+       flex: 1;
+      }
+      /* footer */
+      footer {
+        height: 100px;
+        display: flex;
+      }
+      footer > * {
+        border: 1px solid #aaa;
+      }
+      .footer-logo {
+        width: 200px;
+      }
+      .copyright {
+        flex: 1;
+      }
+      .family-site {
+        width: 230px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <aside>
+        <header></header>
+        <nav></nav>
+      </aside>
+      <section class="center">
+        <h2 class="hidden">center content</h2>
+        <article class="notice"></article>
+        <article class="gallery"></article>
+        <article class="banner"></article>
+      </section>
+      <section class="slide-wrapper">
+        <h2 class="hidden">slide content</h2>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-logo"></div>
+      <div class="copyright"></div>
+      <div class="family-site"></div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        color: #333;
+      }
+      a {
+        color: inherit;
+      }
+      .hidden {
+        display: none;
+      }
+      /* 큰구조 */
+      body {
+        height: 100vh;
+      }
+      main {
+        display: flex;
+        height: calc(100% - 100px);
+      }
+      main > * {
+        border: 1px solid #333;
+      }
+
+      /* aside */
+      aside {
+        width: 200px;
+      }
+      aside > * {
+        border: 1px solid #333;
+      }
+      aside > header {
+        height: 100px;
+      }
+      nav {
+      height: 400px;
+      }
+      .spot-menu {
+        height: 50px;
+      }
+
+      .slide-wrapper {
+        flex: 1;
+      }
+      /* content */
+      section > * {
+        border: 1px solid #333;
+      }
+      .center {
+        width: 400px;
+      }
+      .shortcut {
+        height: 150px;
+      }
+      .notice {
+        height: 250px;
+      }
+      .gallery {
+        flex: 1;
+      }
+      /* footer */
+      footer {
+        display: flex;
+        height: 100px;
+       
+      }
+      footer > * {
+        border: 1px solid #333;
+      }
+       .footer-logo {
+        width: 200px;
+      }
+      .copyright {
+        flex: 1px;
+      }
+      .sns {
+        width: 230px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <aside>
+        <header></header>
+        <nav></nav>
+        <div class="spot-menu"></div>
+      </aside>
+      <section class="center">
+        <h2 class="hidden">content</h2>
+        <article class="shortcut"></article>
+        <article class="notice"></article>
+        <article class="gallery"></article>
+      </section>
+      <section class="slide-wrapper">
+        <h2 class="hidden">slide</h2>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-logo"></div>
+      <div class="copyright"></div>
+      <div class="sns"></div>
+    </footer>
+  </body>
+</html>
