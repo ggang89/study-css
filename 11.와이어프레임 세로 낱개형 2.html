@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>와이어프레임_2(세로형)</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        font-family: "맑은고딕";
+        font-size: 14px;
+        color: #333;
+      }
+      .wrapper {
+        width: 1000px;
+        height: 650px;
+      }
+      .wrapper aside {
+        width: 200px;
+        height: 100%;
+        float: left;
+        background-color: #aaa;
+      }
+      .wrapper main {
+        width: 800px;
+        float: right;
+        height: 100%;
+        background-color: #bbb;
+      }
+      /* aside */
+      aside .logo {
+        height: 100px;
+        background-color: #999;
+      }
+      aside nav {
+        background-color: #333;
+        width: 180px;
+        margin: 10px 0 0 10px;
+        position: relative;
+        z-index: 1;
+      }
+      /* main menu */
+      aside nav > ul li {
+        line-height: 40px;
+        text-align: center;
+      }
+      aside nav > ul li a {
+        display: block;
+        color: #fff;
+      }
+      aside nav > ul li:hover a {
+        color: #333;
+      }
+      aside nav > ul li:hover {
+        background-color: #ccc;
+      }
+      /*sub menu */
+      aside nav > ul ul {
+        position: absolute;
+        top: -20px;
+        left: 100%;
+        width: 100%;
+        height: 200px;
+        background-color: #ccc;
+        display: none;
+      }
+      aside nav > ul ul > li:hover a {
+        color: #ccc;
+      }
+      aside nav > ul ul > li:hover {
+        background-color: #333;
+      }
+      /* main contents */
+      main .slides {
+        height: 350px;
+        background-color: #777;
+      }
+      .contents > div {
+        width: 33.3%;
+        height: 200px;
+        float: left;
+      }
+      .contents .notice {
+        background-color: #666;
+      }
+      .contens .gallert {
+        background-color: #555;
+      }
+      .contents .quick_links {
+        background-color: #444;
+      }
+      /* footer */
+      footer .copyright {
+        float: left;
+        width: 200px;
+        background-color: #333;
+      }
+      footer .sns {
+        width: 600px;
+        float: right;
+      }
+      footer .sns > * {
+        height: 50px;
+      }
+      .sns_list {
+        background-color: #222;
+      }
+      .family_site {
+        background-color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper cf">
+      <aside>
+        <h1 class="logo"></h1>
+        <nav>
+          <ul>
+            <li>
+              <a href="">mainMenu-1</a>
+              <ul>
+                <li><a href="">subMenu-11</a></li>
+                <li><a href="">subMenu-12</a></li>
+                <li><a href="">subMenu-13</a></li>
+                <li><a href="">subMenu-14</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">mainMenu-2</a>
+              <ul>
+                <li><a href="">subMenu-21</a></li>
+                <li><a href="">subMenu-22</a></li>
+                <li><a href="">subMenu-23</a></li>
+                <li><a href="">subMenu-24</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">mainMenu-3</a>
+              <ul>
+                <li><a href="">subMenu-31</a></li>
+                <li><a href="">subMenu-32</a></li>
+                <li><a href="">subMenu-33</a></li>
+                <li><a href="">subMenu-34</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">mainMenu-4</a>
+              <ul>
+                <li><a href="">subMenu-41</a></li>
+                <li><a href="">subMenu-42</a></li>
+                <li><a href="">subMenu-43</a></li>
+                <li><a href="">subMenu-44</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <main>
+        <div class="slides"></div>
+        <div class="contents cf">
+          <div class="notice"></div>
+          <div class="gallery"></div>
+          <div class="quick_links"></div>
+        </div>
+        <footer class="cf">
+          <div class="coptright"></div>
+          <div class="sns">
+            <ul class="sns_list"></ul>
+            <div class="family_site"></div>
+          </div>
+        </footer>
+      </main>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      let mainMenu = $("aside nav>ul>li");
+
+      mainMenu
+        .mouseover(function () {
+          $(this).find("ul").stop().slideDown();
+        })
+        .mouseout(function () {
+          $(this).find("ul").stop().slideUp();
+        });
+    </script>
+  </body>
+</html>
