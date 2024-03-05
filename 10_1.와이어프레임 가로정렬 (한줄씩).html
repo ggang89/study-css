@@ -83,7 +83,20 @@
         width: 100%;
         display: none;
       }
-
+      /* slide */
+      .slidewrapper {
+        position: relative;
+        overflow: hidden;
+      }
+      .container {
+        width: 3600px;
+        height: 300px;
+      }
+      .slide {
+        width: 1200px;
+        height: 300px;
+        float: left;
+      }
       /* main contens */
       main section {
         width: 400px;
@@ -164,7 +177,27 @@
           </ul>
         </nav>
       </header>
-      <div class="slides"></div>
+
+      <div class="slides slidewrapper">
+        <ul class="container">
+          <li class="slide">
+            <a href="">
+              <img src="./images/01.JPG" alt="이미지_1" />
+            </a>
+          </li>
+          <li class="slide">
+            <a href="">
+              <img src="./images/02.jpg" alt="이미지_2" />
+            </a>
+          </li>
+          <li class="slide">
+            <a href="">
+              <img src="./images/03.jpg" alt="이미지_3" />
+            </a>
+          </li>
+        </ul>
+      </div>
+
       <main class="cf">
         <section class="notice"></section>
         <section class="banner"></section>
@@ -187,6 +220,23 @@
         .mouseout(function () {
           $(this).find("ul").stop().slideUp();
         });
+
+      // slide
+      let slideContainer = $(".container");
+      let slide = slideContainer.find(".slide");
+      let slideCount = slide.length;
+      let currentIdx = 0;
+
+      //setInteval(할일,시간);
+      // 0+1%3  1
+      // 1+1%3  2
+      // 2+1%3  0
+
+      setInterval(function () {
+        let nextIdx = (currentIdx + 1) % slideCount;
+        slideContainer.animate({ marginLeft: -1200 * nextIdx + "px" });
+        currentIdx = nextIdx;
+      }, 3000);
     </script>
   </body>
 </html>
