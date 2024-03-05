@@ -85,7 +85,18 @@
         width: 100%;
         display: none;
       }
-
+      /* slide */
+      .slidewrapper {
+        height: 300px;
+        overflow: hidden;
+      }
+      .container {
+        height: 900px;
+      }
+      .slide {
+        height: 300px;
+        width: 1200px;
+      }
       /* main contens */
       main section {
         width: 400px;
@@ -142,7 +153,6 @@
                 <li><a href="">SubMenu-1</a></li>
                 <li><a href="">SubMenu-2</a></li>
                 <li><a href="">SubMenu-3</a></li>
-               
               </ul>
             </li>
             <li class="mainMenu">
@@ -150,7 +160,6 @@
               <ul>
                 <li><a href="">SubMenu-1</a></li>
                 <li><a href="">SubMenu-2</a></li>
-               
               </ul>
             </li>
             <li class="mainMenu">
@@ -165,7 +174,19 @@
           </ul>
         </nav>
       </header>
-      <div class="slides"></div>
+      <div class="slides slidewrapper">
+        <ul class="container">
+          <li class="slide">
+            <a href=""><img src="./images/01.JPG" alt="img_1" /></a>
+          </li>
+          <li class="slide">
+            <a href=""><img src="./images/02.jpg" alt="img_2" /></a>
+          </li>
+          <li class="slide">
+            <a href=""><img src="./images/03.jpg" alt="img_3" /></a>
+          </li>
+        </ul>
+      </div>
       <main class="cf">
         <section class="notice"></section>
         <section class="banner"></section>
@@ -190,6 +211,21 @@
         .mouseout(function () {
           $(this).find("ul").stop().slideUp();
         });
+
+      //slide
+      let slidCcontainer = $(".container");
+      let slide = slidCcontainer.find(".slide");
+      let slideCount = slide.length;
+      let currentIdx = 0;
+
+      function autoSlide() {
+        setInterval(function () {
+          let nextIdx = (currentIdx + 1) % slideCount;
+          slidCcontainer.animate({ marginTop: -300 * nextIdx + "px" });
+          currentIdx = nextIdx;
+        }, 3000);
+      }
+      autoSlide();
     </script>
   </body>
 </html>
