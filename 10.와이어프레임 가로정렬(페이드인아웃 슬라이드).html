@@ -83,7 +83,20 @@
         width: 100%;
         display: none;
       }
-
+      /* slide */
+      .container {
+        width: 100%;
+        height: 300px;
+        position: relative;
+      }
+      .slide {
+        position: absolute;
+        height: 300px;
+        width: 100%;
+        left: 0;
+        top: 0;
+        display: none;
+      }
       /* main contens */
       main section {
         width: 400px;
@@ -164,7 +177,31 @@
           </ul>
         </nav>
       </header>
-      <div class="slides"></div>
+      <div class="slides slidewrapper">
+        <ul class="container">
+          <li class="slide">
+            <a href=""
+              ><img
+                src="https://via.placeholder.com/1000x300.png?text=img_1"
+                alt="img_1"
+            /></a>
+          </li>
+          <li class="slide">
+            <a href=""
+              ><img
+                src="https://via.placeholder.com/1000x300/white.png?text=img_2"
+                alt="img_2"
+            /></a>
+          </li>
+          <li class="slide">
+            <a href=""
+              ><img
+                src="https://via.placeholder.com/1000x300/blue.png?text=img_3"
+                alt="img_3"
+            /></a>
+          </li>
+        </ul>
+      </div>
       <main class="cf">
         <section class="notice"></section>
         <section class="banner"></section>
@@ -189,6 +226,22 @@
         .mouseout(function () {
           subMenu.stop().slideUp();
         });
+
+      //slide
+      let slideContainer = $(".container");
+      let slide = slideContainer.find(".slide");
+      let slideCount = slide.length;
+      let currentIdx = 0;
+
+      slide.eq(0).fadeIn();
+      setInterval(showNextSlide, 3000);
+
+      function showNextSlide() {
+        let nextIdx = (currentIdx + 1) % slideCount;
+        slide.eq(currentIdx).fadeOut();
+        slide.eq(nextIdx).fadeIn();
+        currentIdx = nextIdx;
+      }
     </script>
   </body>
 </html>
