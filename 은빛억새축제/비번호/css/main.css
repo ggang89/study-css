@@ -1,0 +1,261 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "맑은고딕";
+  font-size: 14px;
+  color: #333;
+  box-sizing: border-box;
+}
+/* 
+주조색:FCA148 
+보조색:#49d2fc*/
+img {
+  vertical-align: top;
+}
+.cf:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+/* 빈공간을 만들어서 부모요소가 float이 걸린 자식요소의 크기를 
+못 알아보는 것을 해결해줌 */
+.hidden {
+  display: none;
+}
+/* 와이어프레임 */
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+header {
+  height: 100px;
+}
+.slides {
+  height: 300px;
+  background-color: #bbb;
+}
+main {
+  height: 200px;
+  background-color: #fff;
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+footer {
+  height: 100px;
+  background-color: #ebebeb;
+}
+/* header */
+header > .logo {
+  width: 200px;
+  padding-top: 30px;
+  float: left;
+  height: 100%;
+}
+header nav {
+  width: 720px;
+  float: right;
+  margin-top: 30px;
+  margin-right: 10px;
+  position: relative;
+  z-index: 1;
+}
+nav > ul > li {
+  line-height: 40px;
+  float: left;
+  width: 180px;
+  text-align: center;
+}
+nav > ul > li a {
+  color: #fff;
+  display: block;
+  background-color: #333;
+  transition: 0.3s;
+}
+nav ul > ul {
+  position: absolute;
+  left: 0;
+  width: 100%;
+
+  display: none;
+}
+nav ul ul li a {
+  background-color: #fff;
+  display: block;
+  color: #333;
+}
+nav > ul > li a:hover {
+  background-color: #fca148;
+}
+nav ul ul a:hover {
+  background: #49d2fc;
+}
+/* main content */
+main section {
+  width: 400px;
+  float: left;
+  height: 100%;
+}
+/* tab */
+.tabmenu {
+  position: relative;
+  top: 1px;
+  z-index: 1;
+}
+.tabmenu li {
+  float: left;
+}
+.tabmenu li a {
+  display: block;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  background-color: #ccc;
+}
+.tabmenu li.active a {
+  background-color: #fff;
+}
+.tabcontent {
+  padding: 10px;
+  border: 1px solid #ccc;
+  position: relative;
+  height: 150px;
+}
+.tabcontent > div {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: none;
+}
+.tabcontent > div.active {
+  display: block;
+}
+#notice {
+  padding: 0 10px;
+}
+#notice li {
+  line-height: 30px;
+}
+#notice li span {
+  float: right;
+}
+#notice li:nth-child(even) {
+  background-color: #ccc;
+}
+#gallery {
+  padding: 20px;
+}
+#gallery ul li {
+  float: left;
+  margin-right: 40px;
+}
+/* slides */
+.slides {
+  height: 300px;
+  overflow: hidden;
+}
+.slides > ul {
+  height: 900px;
+}
+.slide {
+  width: 1200px;
+  height: 300px;
+  position: relative;
+}
+.slide h2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px 25px;
+  color: #fff;
+}
+/* banner */
+.banner,
+.quick_links {
+  position: relative;
+  padding: 5px 10px;
+  overflow: hidden;
+}
+.banner h2,
+.quick_links h2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 10px 20px;
+}
+.banner img,
+.quick_links img {
+  width: 100%;
+}
+.banner a:hover,
+.quick_links a:hover {
+  opacity: 0.5;
+}
+/* footer */
+footer div {
+  float: left;
+  height: 100%;
+}
+footer .logo {
+  width: 200px;
+  padding: 30px 0 0 20px;
+}
+footer .copyright {
+  width: 800px;
+  text-align: center;
+  line-height: 100px;
+}
+footer .sns {
+  width: 200px;
+  height: 100%;
+  float: left;
+  padding-top: 24px;
+}
+footer .sns > li {
+  float: left;
+}
+footer .sns li + li {
+  /* 형제선택자 */
+  margin-left: 10px;
+}
+/* popup */
+#popup {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: none;
+  z-index: 10;
+}
+#popup .popup_content {
+  width: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px 20px 100px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+#popup .popup_content .close {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  padding: 5px 8px;
+}
+#popup.active {
+  display: block;
+}
