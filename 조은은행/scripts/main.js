@@ -26,3 +26,16 @@ function autoSlide(){
   },3000)
 }
 autoSlide();
+
+// 팝업
+let popupLink = $('.notice li:first');
+let popup = $('#popup');
+let popupCloseBtn = $('.close');
+
+popupLink.click(function(e){
+e.preventDefault();
+popup.addClass('active');
+});
+popupCloseBtn.click(function(e){
+  popup.removeClass('active');
+});
