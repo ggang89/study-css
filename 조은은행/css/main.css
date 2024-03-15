@@ -1,0 +1,94 @@
+@charset "utf-8";
+
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: '맑은고딕';
+  font-size: 14px;
+  color: #333;
+  box-sizing: border-box;
+}
+img{
+  vertical-align: top;
+}
+.cf:after{
+content: '';
+display: block;
+clear: both;
+}
+/* 기본구조 */
+.wrapper{
+  width: 1200px;
+  margin: 0 auto;
+}
+header{
+  width: 100%;
+  height: 100px;
+  background-color: aqua;
+}
+
+.slides{
+  width: 100%;
+  height: 350px;
+  background-color: #666;
+}
+main{
+  width: 1200px;
+  height: 200px;
+  background-color: beige;
+ 
+}
+
+footer{
+  width: 1200px;
+  height: 100px;
+  float: left;
+  background-color: blanchedalmond;
+}
+
+/* header */
+header .logo{
+  width: 200px;
+  height: 100%;
+  float: left;
+  background-color: #ddd;
+}
+nav{
+  width: 1000px;
+  height: 100%;
+  float: right;
+  background-color: #d22626;
+}
+/* main */
+main section{
+  width: 400px;
+  float: left;
+  height: 100%;
+}
+.notice{
+ 
+  background-color: #555;
+}
+.gallery{
+ 
+  background-color: #444;
+}
+.quick_links{
+
+  background-color: #222;
+}
+/* footer */
+footer div{
+  float: left;
+  height: 100px;
+}
+.copyright{
+  width: 900px;
+  background-color: antiquewhite;
+}
+.menu_family{
+  width: 300px;
+  background-color: #888;
+}
