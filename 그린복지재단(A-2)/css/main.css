@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: "맑은 고딕";
+  color: #ccc;
+}
+img{
+  vertical-align: top;
+}
+.cf:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* 와이어프레임 */
+.wrapper{
+  width: 1200px;
+  height: 700px;
+  margin: 0 auto;
+}
+header{
+  width: 100%;
+  height: 100px;
+  background-color: #aaa;
+}
+header .logo{
+  width: 200px;
+  height: 100%;
+  background-color: #888;
+  float: left;
+}
+header nav{
+  width: 1000px;
+  height: 100%;
+  background-color: #999;
+  float: right;
+}
+.slides{
+  width: 100%;
+  height: 300px;
+  background-color: #bbb;
+}
+main{
+  width: 100%;
+  height: 200px;
+  background-color: #ccc;
+}
+main section{
+  width: 33.3333%;
+  height: 100%;
+  border: 1px solid black;
+  box-sizing: border-box;
+  float: left;
+}
+footer{
+  width: 100%;
+  height: 100px;
+}
+footer h2{
+  float: left;
+  height: 100px;
+  width: 200px;
+  background-color: #555;
+}
+footer .copyright{
+  float: left;
+  width: 800px;
+  height: 100px;
+  background-color: #666;
+}
+footer .familysite{
+  float: right;
+  width: 200px;
+  height: 100px;
+  background-color: #777;
+}
