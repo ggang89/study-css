@@ -83,15 +83,14 @@ aside nav {
   font-size: 18px;
   display: block;
   color: #fff;
+  background-color: darkblue;
 }
 nav ul li {
   text-align: center;
   line-height: 40px;
   border: 1px solid #333;
 }
-.mainmenu > li > a {
-  background-color: darkblue;
-}
+
 .mainmenu > li > a:hover {
   background-color: rgb(194, 202, 75);
   color: white;
