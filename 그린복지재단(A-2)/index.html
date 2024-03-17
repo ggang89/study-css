@@ -3,36 +3,143 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>그린복지재단</title>
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
     <div class="wrapper">
       <header class="cf">
-        <h1 class="logo"></h1>
-        <nav></nav>
+        <h1 class="logo">
+          <a href="#">
+            <img src="images/logo.png" alt="로고" />
+          </a>
+        </h1>
+        <nav>
+          <ul class="mainmenu">
+            <li>
+              <a href="#">재단소개</a>
+              <ul class="submenu">
+                <li><a href="#">설립취지</a></li>
+                <li><a href="#">연혁</a></li>
+                <li><a href="#">찾아오시는길</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">후원하기</a>
+              <ul class="submenu">
+                <li><a href="#">국내후원</a></li>
+                <li><a href="#">국외후원</a></li>
+                <li><a href="#">맞춤후원</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">자료실</a>
+              <ul class="submenu">
+                <li><a href="#">서식자료실</a></li>
+                <li><a href="#">사진자료실</a></li>
+                <li><a href="#">후원양식</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">스토리</a>
+              <ul class="submenu">
+                <li><a href="#">웹진</a></li>
+                <li><a href="#">보고서</a></li>
+                <li><a href="#">나의 후원</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
       </header>
-      <div class="slides"></div>
+      <div class="slides">
+        <ul class="container">
+          <li class="slide">
+            <a href="#">
+              <h2>그린복지재단 소개</h2>
+              <img src="images/slide01.jpg" alt="슬라이드1" />
+            </a>
+          </li>
+          <li class="slide">
+            <a href="#">
+              <h2>국내후원, 국외후원</h2>
+              <img src="images/slide02.jpg" alt="슬라이드2" />
+            </a>
+          </li>
+          <li class="slide">
+            <a href="#">
+              <h2>그린재단 찾아오시는 길</h2>
+              <img src="images/slide03.jpg" alt="슬라이드3" />
+            </a>
+          </li>
+        </ul>
+      </div>
       <main class="cf">
-        <section>
-          <h2 class="notice"></h2>
-          <div id="notice"></div>
+        <section class="notice">
+          <h2>공지사항</h2>
+          <ul>
+            <li>
+              <a href="#">그린복지재단 이벤트 안내</a><span>2024.03.03</span>
+            </li>
+            <li>
+              <a href="#">그린 복지재단 안내사항</a><span>2024.03.03</span>
+            </li>
+            <li><a href="#">이벤트 당첨자 안내</a><span>2024.03.03</span></li>
+            <li>
+              <a href="#">고객 서비스 점검 안내</a><span>2024.03.03</span>
+            </li>
+          </ul>
         </section>
-        <section>
-          <h2 class="garelly"></h2>
-          <div id="garelly"></div>
+        <section class="gallery">
+          <h2>갤러리</h2>
+          <ul>
+            <li>
+              <a href="#"><img src="images/gallery01.png" alt="갤러리1" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/gallery02.png" alt="갤러리2" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/gallery03.jpg" alt="갤러리3" /></a>
+            </li>
+          </ul>
         </section>
-        <section>
-          <h2 class="banner"></h2>
-          <div id="banner"></div>
+
+        <section id="banner">
+          <a href="#">
+            <h2>배너</h2>
+            <img src="images/sortcut.jpg" alt="배너" />
+          </a>
         </section>
       </main>
+
       <footer class="cf">
-        <h2 class="logo"></h2>
-        <div class="copyright"></div>
-        <div class="familysite"></div>
+        <h2 class="logo">
+          <a href="#"><img src="images/footer_logo.png" alt="푸터로고" /></a>
+        </h2>
+        <div class="copyright">
+          <p>Copyright &copy; by Green복지재단. All rights reserved.</p>
+        </div>
+        <select class="familysite">
+          <option value="">패밀리사이트1</option>
+          <option value="">패밀리사이트2</option>
+          <option value="">패밀리사이트3</option>
+        </select>
       </footer>
+
+      <div class="popup">
+        <div class="popupcontent">
+          <h2>그린복지재단 이벤트 안내</h2>
+          <p>
+            안녕하세요. 서울 ‘그린복지재단’입니다.<br />
+            그린복지 이벤트를 2024년 3월부터 시작하고자 합니다. 고객님의 소중한
+            이야기 중 ‘베스트 후기’를 선정하여 감사의 마음을 전하는
+            이벤트입니다.
+          </p>
+          <div class="close">닫기</div>
+        </div>
+      </div>
     </div>
+
     <script src="js/code.jquery.com_jquery-3.7.1.js"></script>
     <script src="js/main.js"></script>
   </body>
