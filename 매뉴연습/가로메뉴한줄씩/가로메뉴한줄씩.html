@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>가로메뉴 한줄씩</title>
+  <link rel="stylesheet" href="./가로메뉴한줄씩.css">
+</head>
+<body>
+  <header>
+    <h1 class="logo">logo</h1>
+    <nav>
+      <ul  class="mainmenu">
+        <li>
+          <a href="">MENU-1</a>
+          <ul>
+            <li><a href="">SubMenu-1</a></li>
+            <li><a href="">SubMenu-2</a></li>
+            <li><a href="">SubMenu-3</a></li>
+            <li><a href="">SubMenu-4</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="">MENU-2</a>
+          <ul>
+            <li><a href="">SubMenu-1</a></li>
+            <li><a href="">SubMenu-2</a></li>
+            <li><a href="">SubMenu-3</a></li>
+            <li><a href="">SubMenu-4</a></li>
+          </ul>
+        </li>
+        <li >
+          <a href="">MENU-3</a>
+          <ul>
+            <li><a href="">SubMenu-1</a></li>
+            <li><a href="">SubMenu-2</a></li>
+            <li><a href="">SubMenu-3</a></li>
+            <li><a href="">SubMenu-4</a></li>
+          </ul>
+        </li>
+        <li >
+          <a href="">MENU-4</a>
+          <ul>
+            <li><a href="">SubMenu-1</a></li>
+            <li><a href="">SubMenu-2</a></li>
+            <li><a href="">SubMenu-3</a></li>
+            <li><a href="">SubMenu-4</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <script src="../jquery-1.12.3.js"></script>
+  <script>
+ let mainMenu = $('.mainmenu>li');
+
+ mainMenu.mouseover(function(){
+  $(this).find('ul').stop().slideDown();
+ });
+ mainMenu.mouseout(function(){
+  $(this).find('ul').stop().slideUp();
+ })
+
+
+  </script>
+</body>
+</html>

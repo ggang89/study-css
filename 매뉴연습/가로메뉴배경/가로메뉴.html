@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./가로메뉴2.css">
+</head>
+<body>
+  <header class="cf ">
+    <h1 class="logo">로고</h1>
+    <nav>
+      <ul class="mainmenu">
+        <li>
+          <a href="#">메인메뉴1</a>
+          <ul class="submenu">
+            <li><a href="#">서브메뉴1</a></li>
+            <li><a href="#">서브메뉴2</a></li>
+            <li><a href="#">서브메뉴3</a></li>
+            <li><a href="#">서브메뉴4</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#"> 메인메뉴2</a>
+          <ul class="submenu">
+            <li><a href="#">서브메뉴21</a></li>
+            <li><a href="#">서브메뉴22</a></li>
+            <li><a href="#">서브메뉴23</a></li>
+            <li><a href="#">서브메뉴24</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">메인메뉴3</a>
+          <ul class="submenu">
+            <li><a href="#">서브메뉴31</a></li>
+            <li><a href="#">서브메뉴32</a></li>
+            <li><a href="#">서브메뉴33</a></li>
+            <li><a href="#">서브메뉴34</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">메인메뉴4</a>
+          <ul class="submenu">
+            <li><a href="#">서브메뉴41</a></li>
+            <li><a href="#">서브메뉴42</a></li>
+            <li><a href="#">서브메뉴43</a></li>
+            <li><a href="#">서브메뉴44</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <script src="../jquery-1.12.3.js"></script>
+  <script>
+let mainMenu =$('.mainmenu>li');
+let subMenu =$('.submenu');
+let header =$('header')
+mainMenu.mouseover(function(){
+header.addClass('active');
+subMenu.stop().slideDown();
+}).mouseout(function(){
+  header.removeClass('active');
+  subMenu.stop().slideUp();
+});
+  </script>
+</body>
+</html>

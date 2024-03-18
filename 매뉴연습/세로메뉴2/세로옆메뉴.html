@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>세로옆메뉴</title>
+  <link rel="stylesheet" href="세로옆.css">
+</head>
+<body>
+  <div class="wrapper">
+    <aside>
+      <h1 class="logo">logo</h1>
+      <nav>
+        <ul class="mainmenu">
+          <li>
+            <a href="">메인메뉴1</a>
+            <ul class="submenu">
+              <li><a href="">서브메뉴1</a></li>
+              <li><a href="">서브메뉴1</a></li>
+              <li><a href="">서브메뉴1</a></li>
+              <li><a href="">서브메뉴1</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="">메인메뉴2</a>
+            <ul class="submenu">
+              <li><a href="">서브메뉴2</a></li>
+              <li><a href="">서브메뉴2</a></li>
+              <li><a href="">서브메뉴2</a></li>
+              <li><a href="">서브메뉴2</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="">메인메뉴3</a>
+            <ul class="submenu">
+              <li><a href="">서브메뉴3</a></li>
+              <li><a href="">서브메뉴3</a></li>
+              <li><a href="">서브메뉴3</a></li>
+              <li><a href="">서브메뉴3</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="">메인메뉴4</a>
+            <ul class="submenu">
+              <li><a href="">서브메뉴4</a></li>
+              <li><a href="">서브메뉴4</a></li>
+              <li><a href="">서브메뉴4</a></li>
+              <li><a href="">서브메뉴4</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <main></main>
+  </div>
+  <script src="../jquery-1.12.3.js"></script>
+  <script>
+let mainMenu = $('.mainmenu >li');
+
+mainMenu.mouseover(function(){
+$(this).find('ul').stop().slideDown();
+}).mouseout(function(){
+  $(this).find('ul').stop().slideUp();
+
+});
+  </script>
+</body>
+</html>

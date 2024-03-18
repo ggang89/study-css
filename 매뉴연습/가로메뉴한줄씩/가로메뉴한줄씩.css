@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "맑은 고딕";
+  font-size: 14px;
+  color: #333;
+}
+.cf {
+  content: " ";
+  display: block;
+  clear: both;
+}
+header{
+  width: 1200px;
+  height: 100px;
+  margin: 0 auto;
+  background-color: #ccc;
+}
+.logo{
+  width: 200px;
+  padding: 35px 20px;
+  float: left;
+}
+nav{
+  float: right;
+  width: 800px;
+  text-align: center;
+  padding-top: 60px;
+}
+nav a{
+  display: block;
+}
+nav ul li{
+  float: left;
+  width: 200px;
+  line-height: 40px;
+  position: relative;
+  background-color: antiquewhite;
+}
+nav ul li>a:hover{
+  background-color: #bbb;
+  font-weight: bold;
+}
+nav ul ul{
+  position: absolute;
+  left: 0;
+  background: #fff;
+  display: none;
+}
+nav ul ul>li>a:hover{
+  background: #bbb;
+  font-weight: bold;
+}
