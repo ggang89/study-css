@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>페이드 인 아웃</title>
+    <link rel="stylesheet" href="페이드인아웃.css" />
+  </head>
+  <body>
+    <div class="slides">
+      <ul class="container">
+        <li class="slide">
+          <a href="#"
+            ><img src="https://via.placeholder.com/1200x300?text=img1" alt=""
+          /></a>
+        </li>
+        <li class="slide">
+          <a href="#"
+            ><img src="http://via.placeholder.com/1200x300?text=img2" alt=""
+          /></a>
+        </li>
+        <li class="slide">
+          <a href="#"
+            ><img src="http://via.placeholder.com/1200x300?text=img3" alt=""
+          /></a>
+        </li>
+      </ul>
+    </div>
+    <script src="/매뉴연습/jquery-1.12.3.js"></script>
+    <script>
+      let container = $(".container");
+      let slide = $(".slide");
+      let slideCount = slide.length;
+      let currentIdx = 0;
+
+      slide.eq(currentIdx).fadeIn();
+
+      function autoSlide() {
+        setInterval(function () {
+          let nextIdx = (currentIdx + 1) % slideCount;
+          slide.eq(currentIdx).fadeOut();
+          slide.eq(nextIdx).fadeIn();
+          currentIdx = nextIdx;
+        }, 3000);
+      }
+      autoSlide();
+    </script>
+  </body>
+</html>

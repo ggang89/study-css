@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>좌우 슬라이드</title>
+    <link rel="stylesheet" href="좌우슬라이드.css">
+  </head>
+  <body>
+    <div class="slides">
+      <ul class="container">
+        <li class="slide">
+          <a href="#"><img src="https://via.placeholder.com/1200x300?text=img1" alt=""/></a>
+        </li>
+        <li class="slide">
+          <a href="#"><img src="http://via.placeholder.com/1200x300?text=img2" alt=""/></a>
+        </li>
+        <li class="slide">
+          <a href="#"><img src="http://via.placeholder.com/1200x300?text=img3" alt=""/></a>
+        </li>
+      </ul>
+    </div>
+    <script src="/매뉴연습/jquery-1.12.3.js"></script>
+    <script>
+      let slide =$('.slide');
+      let container=$('.container');
+      let slideCount =slide.length;
+      let currentIdx = 0;
+
+      function autoSlide(){
+        setInterval(function(){
+          let nextIdx =(currentIdx +1 ) % slideCount;
+          container.animate({
+            marginLeft:-1200*nextIdx+'px'
+          });
+          currentIdx = nextIdx;
+        },3000)
+      }
+      autoSlide();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+@charset "uhf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "맑은 고딕";
+  font-size: 14px;
+  color: #333;
+}
+.slides{
+  margin: 0 auto;
+  width: 1200px;
+  overflow: hidden;
+}
+.container{
+  height: 900px;
+}
+.slides{
+  width: 1200px;
+  height: 300px;
+}
