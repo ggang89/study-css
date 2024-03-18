@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>탭 서브메뉴방식 연습</title>
+    <link rel="stylesheet" href="탭 서브메뉴.css" />
+  </head>
+  <body>
+    <main class="cf">
+      <div class="tabContent">
+        <ul class="tabmenu ">
+          <li class="active"><a href="">공지사항</a>
+            <ul id="notice">
+              <li>
+                <a href="">공지사항 1번 입니다.<span>0000.00.00</span></a>
+              </li>
+              <li>
+                <a href="">공지사항 2번 입니다<span>0000.00.00</span></a>
+              </li>
+              <li>
+                <a href="">공지사항 3번 입니다<span>0000.00.00</span></a>
+              </li>
+              <li>
+                <a href="">공지사항 4번 입니다<span>0000.00.00</span></a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="">갤러리</a>
+            <ul id="gallery">
+              <li>
+                <a href=""
+                  ><img
+                    src="https://via.placeholder.com/90X90?text=img1"
+                    alt=""
+                /></a>
+              </li>
+              <li>
+                <a href=""
+                  ><img src="http://via.placeholder.com/90x90?text=img2" alt=""
+                /></a>
+              </li>
+              <li>
+                <a href=""
+                  ><img src="http://via.placeholder.com/90X90?text=img3" alt=""
+                /></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="banner">
+        <a href="">
+          <img src="http://via.placeholder.com/180X180" alt="" />
+        </a>
+      </div>
+      <div class="shortcut">
+        <a href="">
+          <img src="http://via.placeholder.com/180X180" alt="" />
+        </a>
+      </div>
+    </main>
+
+    <script src="../서브메뉴방식/script/jquery-3.6.1.min.js"></script>
+    <script>
+      let tabMenu = $('.tabmenu>li');
+
+      tabMenu.click(function(e){
+        e.preventDefault();
+        tabMenu.removeClass('active');
+        $(this).addClass('active');
+      });
+    </script>
+  </body>
+</html>

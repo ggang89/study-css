@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  color: #333;
+}
+.cf{
+  content: '';
+  display: block;
+  clear: both;
+}
+main{
+  margin: 0 auto;
+  width: 1200px;
+  height: 200px;
+  float: left;
+  border: 1px solid #ccc;
+}
+main div{
+  float: left;
+  padding:10px 0 0 10px;
+  width: 400px;
+ background-color: antiquewhite;
+  box-sizing: border-box;
+}
+.tabConten{
+  position: relative;
+  width: 400px;
+  height: 100%;
+}
+.tabmenu>li{
+  float: left;
+}
+.tabmenu>li>a{
+	display: block;
+	padding: 5px 10px;
+	border: 1px solid #ccc;
+	border-bottom: none;
+	background-color: #ccc;
+	position: relative;
+	z-index: 1;
+	top: 1px;
+}
+.tabmenu>li.active> a{
+	background-color: #fff;
+}
+.tabmenu>li>ul{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top:40px;
+  width: 400px;
+	height: 150px;
+	border: 1px solid #ccc;
+	background-color: #fff;
+	box-sizing: border-box;
+	display: none;
+}
+.tabmenu>li.active ul{
+  display: block;
+}
+#notice{
+  padding: 10px;
+}
+#notice li{
+  line-height: 25px;
+}
+#notice li span{
+  float: right;
+}
+#gallery > li{
+  float: left;
+  margin: 10px ;
+}
+.banner,.shortcut{
+ overflow: hidden;
+ height: 180px;
+}
+.banner img,.shortcut img{
+  width: 100%;
+}
+.banner a:hover,
+.shortcut a:hover{
+  opacity: 0.7;
+}
