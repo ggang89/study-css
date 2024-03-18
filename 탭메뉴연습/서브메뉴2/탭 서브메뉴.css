@@ -49,15 +49,21 @@ main div{
 }
 .tabmenu>li>ul{
 	position: absolute;
-	left: 0;
-	right: 0;
-	top:40px;
+  top: 40px;
+  left: 6px;
+  right: 0;
+  height: 140px;
   width: 400px;
-	height: 150px;
-	border: 1px solid #ccc;
-	background-color: #fff;
-	box-sizing: border-box;
-	display: none;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  display: none;
+  padding: 0 5px ;
+}
+.tabmenu>li>ul>li:nth-child(even){
+  background-color: #ccc;
+}
+.tabmenu>li>ul>li>a:hover{
+  font-weight: bold;
 }
 .tabmenu>li.active ul{
   display: block;
